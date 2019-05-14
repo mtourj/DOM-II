@@ -366,3 +366,7 @@ img {
   top: 0;
   transition: top 0.5s;
 }
+.nightMode {
+  background-color: #191919 !important;
+  color: white!important;
+}

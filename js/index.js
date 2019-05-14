@@ -1,5 +1,10 @@
 // Your code goes here
 
+// State variables
+let nightMode = false;
+
+// Pointers
+const page = document.querySelectorAll('*');
 const mainNav = document.querySelector(".main-navigation")
 const containerHome = document.querySelector(".container.home")
 const funBusBanner = document.getElementById("banner")
@@ -46,3 +51,14 @@ funBusBanner.addEventListener("drop", () =>{
   }
 }, false)
 
+window.addEventListener("keydown", () => {
+  nightMode = !nightMode;
+
+  page.forEach (el => {
+    if(nightMode){
+      el.classList.add("nightMode");
+    } else {
+      el.classList.remove("nightMode");
+    }
+  })
+})
